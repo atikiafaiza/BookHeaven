@@ -1,132 +1,225 @@
-Features
-User:
-Product Reviews:
+# 🛍️ BookHeaven – MERN E-Commerce Platform
 
-Write, edit, and delete reviews.
-Instant updates on ratings and star percentages.
-Wishlist:
+BookHeaven is a fully-featured **MERN stack e-commerce application** built for scalability and user-friendliness.  
+It allows users to browse products, manage carts, create wishlists, and place orders — all with real-time updates and robust authentication.
 
-Add, remove, and annotate products with personalized notes.
-Order Management:
+---
 
-Create new orders and view order history.
-Profile Management:
+## 🚀 Features
 
-Manage email, username, and multiple addresses.
-Shopping Cart:
+### 🧑‍💻 User
 
-Add products, adjust quantities, and view subtotals.
-Admin:
-Product Management:
+#### **Product Reviews**
+- Write, edit, and delete reviews.
+- Instantly update overall ratings and star percentages.
 
-Add, edit, delete, and soft-delete products.
-Manage product attributes like name and stock.
-Order Management:
+#### **Wishlist**
+- Add and remove products.
+- Annotate products with personalized notes.
 
-View and update order details and status.
-Security & User Experience:
-Secure Authentication:
+#### **Order Management**
+- Create new orders.
+- View complete order history.
 
-Login, signup, OTP verification, password reset, and logout.
-Intuitive Interface:
+#### **Profile Management**
+- Manage email, username, and multiple addresses.
 
-Powered by Material UI for a visually appealing and user-friendly experience.
-Scalability:
-Built for Growth:
-Scalable architecture to handle increasing user demands.
-Project Setup
-Prerequisites
-Node.js ( version v21.1.0 or later )
-MongoDB installed and running locally
-Clone the project
-  git clone https://github.com/RishiBakshii/mern-ecommerce.git
-Navigate to the project directory
-  cd mern-ecommerce
-Install dependencies for frontend and backend separately
-Tip: To efficiently install dependencies for both frontend and backend simultaneously, use split terminals.
+#### **Shopping Cart**
+- Add products, adjust quantities, and view real-time subtotals.
 
-Install frontend dependencies
+---
 
+### 🧑‍🔧 Admin
+
+#### **Product Management**
+- Add, edit, delete, and soft-delete products.
+- Manage product attributes such as name, price, and stock.
+
+#### **Order Management**
+- View and update order details and statuses.
+
+---
+
+### 🔒 Security & User Experience
+
+#### **Secure Authentication**
+- Login, signup, OTP verification, password reset, and logout.
+
+#### **Intuitive Interface**
+- Powered by **Material UI** for a visually appealing, user-friendly experience.
+
+---
+
+### ⚙️ Scalability
+
+#### **Built for Growth**
+- Scalable architecture designed to handle increasing user demands efficiently.
+
+---
+
+## 🧩 Project Setup
+
+### 🧱 Prerequisites
+
+- **Node.js** (v21.1.0 or later)
+- **MongoDB** installed and running locally
+
+---
+
+### 🪄 Clone the Project
+
+```bash
+git clone https://github.com/atikiafaiza/BookHeaven.git
+cd mern-ecommerce
+```
+
+---
+
+### 📦 Install Dependencies
+
+> 💡 Tip: To install dependencies for both frontend and backend efficiently, open two terminals or use a split terminal.
+
+#### Frontend
+
+```bash
 cd frontend
 npm install
-Install backend dependencies
+```
 
+#### Backend
+
+```bash
 cd backend
 npm install
-Environment Variables
-Backend
+```
 
-Create a .env file in the backend directory.
-Add the following variables with appropriate values
+---
+
+## ⚙️ Environment Variables
+
+### Backend
+
+Create a `.env` file inside the **backend** directory and add the following:
+
+```bash
 # Database connection string
 MONGO_URI="mongodb://localhost:27017/your-database-name"
 
 # Frontend URL (adjust if needed)
 ORIGIN="http://localhost:3000"
 
-# Email credentials for sending password resets and OTPs
+# Email credentials (for reset and OTP)
 EMAIL="your-email@example.com"
 PASSWORD="your-email-password"
 
-# Token and cookie expiration settings
-LOGIN_TOKEN_EXPIRATION="30d"  # Days
-OTP_EXPIRATION_TIME="120000"  # Milliseconds
-PASSWORD_RESET_TOKEN_EXPIRATION="2m"  # Minutes
-COOKIE_EXPIRATION_DAYS="30"    # Days
+# Token and cookie expiration
+LOGIN_TOKEN_EXPIRATION="30d"
+OTP_EXPIRATION_TIME="120000"
+PASSWORD_RESET_TOKEN_EXPIRATION="2m"
+COOKIE_EXPIRATION_DAYS="30"
 
-# Secret key for jwt security
+# Secret key (JWT)
 SECRET_KEY="your-secret-key"
 
 # Environment (production/development)
-PRODUCTION="false" # Initially set to false for development
-Frontend
+PRODUCTION="false"
+```
 
-Create a .env file in the frontend directory
-Add the following variable:
+### Frontend
+
+Create a `.env` file inside the **frontend** directory and add:
+
+```bash
 # Backend URL (adjust if needed)
-REACT_APP_BASE_URL="http://localhost:8000" 
-Important
+REACT_APP_BASE_URL="http://localhost:8000"
+```
 
-Replace all placeholders (e.g., your_database_name, your_email) with your actual values.
-Exclude the .env file from version control to protect sensitive information.
-Data seeding
-Get started quickly with pre-populated data: Populate your database with sample users, products, reviews, and carts, enabling you to test functionalities without manual data entry.
-Steps:
+> ⚠️ **Important:**  
+> Replace placeholders (e.g., `your-database-name`, `your-email`) with actual values.  
+> Exclude `.env` from version control to protect sensitive data.
 
-Open a new terminal window.
-Navigate to the backend directory: cd backend
-Run the seeding script: npm run seed ( This script executes the seed.js file within the seed subdirectory equivalent to running node seed/seed.js )
-Running Development Servers
-Important:
+---
 
-Separate terminals: Run the commands in separate terminal windows or use split terminal to avoid conflicts.
-Nodemon required: Ensure you have nodemon installed globally to run the backend development servers using npm run dev. You can install it globally using npm install -g nodemon.
-Start the backend server
-Navigate to the backend directory: cd backend
-Start the server: npm run dev (or npm start)
-You should see a message indicating the server is running, usually on port 8000.
-Start the frontend server:
-Navigate to the frontend directory: cd frontend
-Start the server: npm start
-You should see a message indicating the server is running, usually on port 3000.
-Login with demo account (Optional)
-After successfully seeding the database, you can now explore the application's functionalities using pre-populated sample data.
-here are the login credentials
-  email: demo@gmail.com
-  pass: helloWorld@123
-Please Note: While the demo account provides a convenient way to explore many features, it has some limitations:
+## 🌱 Data Seeding
 
-Password Reset and OTP Verification: Due to security reasons, the demo account uses a non-real email address. Therefore, password reset and OTP verification functionalities are not available for this account.
-What this means:
+Quickly get started with sample data (users, products, reviews, carts).
 
-You cannot request a password reset or receive verification codes on the demo email address.
-To test password reset and OTP verification flows, you need to create a genuine account with a valid email address.
-What to do?
+### Steps:
 
-If you're primarily interested in exploring other functionalities like wishlist, cart, and order history, the demo account is sufficient.
-To test password reset and OTP verification, create a personal account with a valid email address.
-Accessing the Application
-Once both servers are running, you can access them at the following URL's:
+```bash
+# Open new terminal
+cd backend
+npm run seed
+```
 
-Backend: http://localhost:8000
-Frontend: http://localhost:3000
+This runs `seed/seed.js` and populates your database with sample data.
+
+---
+
+## 🏃 Running Development Servers
+
+### Important Notes
+- Use **separate terminals** for backend and frontend.
+- **Nodemon** is required for backend live reloads.
+
+Install globally (if not already):
+
+```bash
+npm install -g nodemon
+```
+
+### Start the Backend Server
+
+```bash
+cd backend
+npm run dev
+```
+
+Server default: **http://localhost:8000**
+
+### Start the Frontend Server
+
+```bash
+cd frontend
+npm start
+```
+
+App default: **http://localhost:3000**
+
+---
+
+## 🔑 Demo Account (Optional)
+
+After seeding, you can log in with the sample user:
+
+```
+Email: demo@gmail.com
+Password: helloWorld@123
+```
+
+### Limitations:
+- Password reset and OTP verification **do not work** for the demo account (no real email).
+- To test these flows, create a new account with a valid email.
+
+---
+
+## 🌐 Accessing the Application
+
+- **Backend:** [http://localhost:8000](http://localhost:8000)
+- **Frontend:** [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 💡 Summary
+
+BookHeaven delivers a full e-commerce experience with:
+- Secure authentication and scalable design.
+- Powerful admin module and interactive UI.
+- Streamlined code organization for ease of development.
+
+---
+
+✨ **Happy Coding!** ✨
+
+---
+
