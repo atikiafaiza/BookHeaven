@@ -70,7 +70,7 @@ It allows users to browse products, manage carts, create wishlists, and place or
 
 ```bash
 git clone https://github.com/atikiafaiza/BookHeaven.git
-cd mern-ecommerce
+cd BookHeaven
 ```
 
 ---
